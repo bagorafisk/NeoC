@@ -5,7 +5,7 @@
 #include <string>
 #include <optional>
 
-constexpr char singleCharTokens[] = {'\0', '(', ')', '{', '}', ':'}
+constexpr char singleCharTokens[] = {'\0', '(', ')', '{', '}', ':'};
 
 enum class TokenType : char {
   Unk = -128,
@@ -28,16 +28,16 @@ const std::unordered_map<std::string, TokenType> keywords = {
   {"void", TokenType::KwVoid},
 };
 
-struct Token {
-  SourceLocation location;
-  TokenType type;
-  std::optional<std::string> value = std::nullopt;
-}
-
 struct SourceLocation {
   std::string_view filepath;
   int line;
   int col;
+};
+
+struct Token {
+  SourceLocation location;
+  TokenType type;
+  std::optional<std::string> value = std::nullopt;
 };
 
 #endif
