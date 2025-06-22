@@ -26,7 +26,7 @@ enum class TokenType : char {
 const std::unordered_map<std::string, TokenType> keywords = {
   {"fn", TokenType::KwFn},
   {"void", TokenType::KwVoid},
-}
+};
 
 struct Token {
   SourceLocation location;
