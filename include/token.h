@@ -3,6 +3,7 @@
 
 #include <unordered_map>
 #include <string>
+#include <string_view>
 #include <optional>
 
 constexpr char singleCharTokens[] = {'\0', '(', ')', '{', '}', ':'};
